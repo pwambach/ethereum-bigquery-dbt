@@ -1,0 +1,27 @@
+{
+  "name": "ethereum-bigquery-dbt",
+  "version": "1.0.0",
+  "description": "A script to create dbt moduel files for ethereum smart contracts",
+  "main": "index.js",
+  "scripts": {
+    "create": "ts-node src/index.ts",
+    "artblocks": "npm run create -- --module-name Artblocks --min-date=2022-10-11",
+    "copy:artblocks": "rm -rf ./dbt-example/models/Artblocks/* && cp ./output/Artblocks/* ./dbt-example/models/Artblocks/"
+  },
+  "keywords": [
+    "ethereum",
+    "dbt"
+  ],
+  "author": "Philipp Wambach <philippwambach@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^10.0.0",
+    "ethers": "^5.7.0",
+    "glob": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.1",
+    "@types/node": "^18.13.0",
+    "ts-node": "^10.9.1"
+  }
+}
