@@ -1,7 +1,7 @@
 {
   "name": "ethereum-bigquery-dbt",
   "version": "1.0.0",
-  "description": "A script to create dbt moduel files for ethereum smart contracts",
+  "description": "A script to create dbt model files for ethereum smart contracts",
   "main": "index.js",
   "scripts": {
     "create": "ts-node src/index.ts",
